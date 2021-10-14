@@ -11,5 +11,11 @@ html {
 }
 
 body {
+  background-image: linear-gradient(
+    to bottom,
+    $color-secondary,
+    $color-primary
+  );
+  background-repeat: no-repeat;
   box-sizing: border-box;
 }

@@ -1,0 +1,17 @@
+.header {
+  background-color: $color-quaternary;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  padding: 9rem;
+  gap: 4rem;
+
+  &__image {
+    width: 13.6rem;
+    border-radius: 100rem;
+    border: 5px solid $color-primary;
+  }
+
+  &__info {
+  }
+}

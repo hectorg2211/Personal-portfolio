@@ -1,3 +1,22 @@
 * {
   font-family: "Raleway", sans-serif;
 }
+
+.h1 {
+  font-weight: 100;
+  font-size: 6.4rem;
+  color: $color-primary;
+}
+
+.h2 {
+  font-weight: 100;
+  font-size: 3rem;
+
+  &--1 {
+    color: $color-primary;
+  }
+
+  &--2 {
+    color: $color-quaternary;
+  }
+}
