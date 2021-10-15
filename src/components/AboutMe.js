@@ -17,7 +17,7 @@ export default function AboutMe() {
             pariatur quis nulla inventore ea aliquid.
           </p>
         </div>
-        <a href="#" className="button about__button">
+        <a href="somewhere" className="button about__button">
           <span>Check my work</span>
         </a>
         {/* TODO: Change the image or place something else here */}
