@@ -25,7 +25,7 @@ export default function Header() {
             }}
           />
         </h1>
-        <h2 className=" h2 h2--1 fix">
+        <h2 className=" h3 h3--1 fix">
           <Typewriter
             options={{ delay: 20 }}
             onInit={(typewriter) => {

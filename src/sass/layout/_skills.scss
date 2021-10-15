@@ -1,0 +1,11 @@
+.skills-section {
+  background-color: $color-quaternary;
+  padding: 9rem;
+
+  .skills {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 2.5rem;
+  }
+}

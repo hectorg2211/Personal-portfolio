@@ -10,14 +10,26 @@
 
 .h2 {
   font-weight: 100;
-  font-size: 3rem;
+  font-size: 6.4rem;
+  padding-bottom: 15px;
 
   &--1 {
     color: $color-primary;
+    border-bottom: 1px solid $color-primary;
   }
 
   &--2 {
     color: $color-quaternary;
+    border-bottom: 1px solid $color-quaternary;
+  }
+}
+
+.h3 {
+  font-weight: 100;
+  font-size: 3rem;
+
+  &--1 {
+    color: $color-primary;
   }
 }
 
