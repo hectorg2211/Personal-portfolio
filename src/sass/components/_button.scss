@@ -1,0 +1,70 @@
+.button {
+  position: relative;
+  font-size: 2.4rem;
+  width: 22rem;
+  height: 5rem;
+  padding: 1.1rem 2.4rem;
+  background-color: $color-tertiary;
+  color: $color-quaternary;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center; // Helps align the before pseudo element
+  align-items: center; // Helps align the before pseudo element
+  text-decoration: none;
+  overflow: hidden;
+
+  &:hover,
+  &:focus {
+    background-color: $color-primary;
+    box-shadow: 0 0 10px $color-primary, 0 0 30px $color-primary,
+      0 0 60px $color-primary, 0 0 100px $color-primary;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 4rem;
+    height: 500%;
+    background-color: $color-primary;
+    transition: 1s;
+    animation: animate 2s linear infinite;
+  }
+
+  &:hover::before {
+    width: 120%;
+  }
+
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 5px;
+    background: $color-tertiary;
+    transition: 0.5s;
+  }
+
+  &:hover::after {
+    background: $color-primary;
+  }
+
+  span {
+    position: relative;
+    opacity: 0.5;
+    z-index: 1;
+    transition: 0.2s;
+  }
+
+  &:hover span {
+    opacity: 1;
+  }
+}
