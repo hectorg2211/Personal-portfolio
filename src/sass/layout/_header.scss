@@ -6,10 +6,42 @@
   padding: 9rem;
   gap: 4rem;
 
-  &__image {
-    width: 13.6rem;
+  &__image-container {
+    position: relative;
+    background-color: $color-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // border-radius: 100rem;
+    overflow: hidden;
+    width: 13rem;
+    height: 13rem;
     border-radius: 100rem;
-    border: 5px solid $color-primary;
+    transition: all 0.2s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 4rem;
+      height: 200%;
+      background-color: $color-quaternary;
+      transition: 1s;
+      animation: animate 2s linear infinite;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 5px;
+    }
+  }
+
+  &__image {
+    width: 12rem;
+    border-radius: 100rem;
+    position: relative;
+    z-index: 1;
+    // border: 5px solid $color-primary;
   }
 
   &__info {

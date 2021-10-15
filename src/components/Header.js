@@ -10,7 +10,9 @@ const removeTypeCursor = () =>
 export default function Header() {
   return (
     <div className="header">
-      <img src={Me} alt="Héctor" className="header__image" />
+      <div className="header__image-container">
+        <img src={Me} alt="Héctor" className="header__image" />
+      </div>
       <div className="header__info">
         <h1 className="h1">
           <Typewriter
