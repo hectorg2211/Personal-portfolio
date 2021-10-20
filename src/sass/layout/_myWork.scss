@@ -4,7 +4,7 @@
     background-color: $color-tertiary;
     position: absolute;
     top: 0;
-    height: 50%;
+    height: calc(50% + 66px);
     width: 100%;
     z-index: -1;
   }
@@ -12,7 +12,7 @@
     background-color: $color-quaternary;
     position: absolute;
     bottom: 0;
-    height: 50%;
+    height: calc(50% - 66px);
     width: 100%;
     z-index: -1;
   }
