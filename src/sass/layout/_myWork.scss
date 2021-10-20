@@ -1,0 +1,42 @@
+.my-work {
+  position: relative;
+  .top-half {
+    background-color: $color-tertiary;
+    position: absolute;
+    top: 0;
+    height: 50%;
+    width: 100%;
+    z-index: -1;
+  }
+  .bottom-half {
+    background-color: $color-quaternary;
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+.work-information {
+  z-index: 1;
+  padding: 9rem;
+
+  &__gallery {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    transition: all 0.2s;
+
+    // &:hover {
+    //   border-radius: 0 300px 0 0;
+    // }
+  }
+}
