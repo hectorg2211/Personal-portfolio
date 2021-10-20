@@ -1,0 +1,31 @@
+.my-experience {
+  padding: 9rem;
+  background-color: $color-quaternary;
+}
+
+.experience-showcase {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 6rem;
+
+  margin-top: 25px;
+  align-items: center;
+  justify-items: center;
+
+  .hexcode {
+    width: 60%;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  p {
+    margin-top: 10px;
+  }
+
+  li {
+    margin-left: 2em;
+  }
+}
