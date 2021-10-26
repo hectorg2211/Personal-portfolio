@@ -1,6 +1,9 @@
 .about {
   background-color: $color-tertiary;
   padding: 9rem;
+  @media only screen and (max-width: $bp-medium) {
+    padding: 5rem;
+  }
 
   &__button {
     grid-column-start: 1;
@@ -15,6 +18,10 @@
     row-gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 4rem 5rem;
+    }
   }
 
   h2 {

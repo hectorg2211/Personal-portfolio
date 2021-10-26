@@ -1,6 +1,9 @@
 .skills-section {
   background-color: $color-quaternary;
   padding: 9rem;
+  @media only screen and (max-width: $bp-medium) {
+    padding: 5rem;
+  }
 
   .skills {
     display: grid;

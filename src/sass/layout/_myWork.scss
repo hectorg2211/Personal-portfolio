@@ -21,6 +21,9 @@
 .work-information {
   z-index: 1;
   padding: 9rem 9rem 1rem 9rem;
+  @media only screen and (max-width: $bp-medium) {
+    padding: 5rem 5rem 1rem 5rem;
+  }
 
   &__gallery {
     margin-top: 25px;

@@ -1,6 +1,10 @@
 .footer {
   padding: 9rem;
 
+  @media only screen and (max-width: $bp-medium) {
+    padding: 5rem;
+  }
+
   &__info {
     margin-top: 6.5rem;
     display: grid;
