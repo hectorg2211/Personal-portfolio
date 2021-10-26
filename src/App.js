@@ -6,6 +6,7 @@ import Skills from "./components/Skills";
 import MyWork from "./components/MyWork";
 import MyExperience from "./components/MyExperience";
 import Contact from "./components/Contact";
+import Modal from "./components/Modal";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <MyWork />
       <MyExperience />
       <Contact />
+      <Modal />
     </div>
   );
 }
