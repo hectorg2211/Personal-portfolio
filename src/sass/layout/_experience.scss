@@ -16,8 +16,17 @@
   align-items: center;
   justify-items: center;
 
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+  }
+
   .hexcode {
     width: 60%;
+    @media only screen and (max-width: $bp-small) {
+      grid-row-start: 4;
+      grid-row-end: 5;
+    }
   }
 
   img {
