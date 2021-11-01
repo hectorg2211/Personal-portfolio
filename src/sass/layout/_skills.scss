@@ -10,5 +10,16 @@
     gap: 2rem;
     grid-template-columns: repeat(4, 1fr);
     margin-top: 2.5rem;
+    justify-items: stretch;
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__skill {
+      @media only screen and (max-width: $bp-huge) {
+        font-size: 2rem;
+      }
+    }
   }
 }
