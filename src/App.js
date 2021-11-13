@@ -6,19 +6,19 @@ import Skills from "./components/Skills";
 import MyWork from "./components/MyWork";
 import MyExperience from "./components/MyExperience";
 import Contact from "./components/Contact";
-import Modal from "./components/Modal";
 
 function App() {
   return (
-    <div className="page">
-      <Header />
-      <AboutMe />
-      <Skills />
-      <MyWork />
-      <MyExperience />
-      <Contact />
-      <Modal />
-    </div>
+    <>
+      <div className="page">
+        <Header />
+        <AboutMe />
+        <Skills />
+        <MyWork />
+        <MyExperience />
+        <Contact />
+      </div>
+    </>
   );
 }
 

@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "./Modal";
 
 export default function MyWork() {
+  const [modalState, setModalState] = useState(false);
+
+  const onWorkClickHandler = () => {
+    setModalState(true);
+  };
+
   return (
     <section className="my-work" id="mywork">
       <div className="top-half"></div>
@@ -9,30 +16,43 @@ export default function MyWork() {
         <h2 className="h2 h2--2">Some of my work</h2>
         <div className="work-information__gallery">
           <img
-            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
+            src="./images/HeyThere.jpg"
             alt="img1"
+            onClick={onWorkClickHandler}
+            className="img"
           />
           <img
-            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            src="./images/React-movies.jpg"
             alt="img2"
+            onClick={onWorkClickHandler}
+            className="img"
           />
           <img
-            src="https://images.unsplash.com/photo-1503252947848-7338d3f92f31?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            src="./images/Natours.jpg"
             alt="img3"
+            onClick={onWorkClickHandler}
+            className="img"
           />
           <img
-            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            src="./images/Rider.jpg"
             alt="img4"
+            onClick={onWorkClickHandler}
+            className="img"
           />
           <img
-            src="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            src="./images/Travelfy.jpg"
             alt="img5"
+            onClick={onWorkClickHandler}
+            className="img"
           />
           <img
-            src="https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            src="./images/Nexter.jpg"
             alt="img6"
+            onClick={onWorkClickHandler}
+            className="img"
           />
         </div>
+        {modalState && <Modal setModalState={setModalState} />}
       </div>
     </section>
   );

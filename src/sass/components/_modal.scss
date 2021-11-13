@@ -1,5 +1,5 @@
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -9,35 +9,104 @@
 }
 
 .modal {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80vw;
   height: 85vh;
   background-color: $color-quaternary;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
-  &__img {
-    width: 100%;
-    height: 30%;
-    background-color: red;
+  &__close-btn {
+    backdrop-filter: blur(2px);
+    box-shadow: 0 20px 40px 10px rgba(0, 0, 0, 0.25);
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    position: absolute;
+    color: white;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__image {
+    flex: 1;
+    height: 50%;
+    img {
+      object-fit: contain;
+      width: 100%;
+    }
   }
 
   &__information {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    height: calc(100% - 30%);
+    flex: 2;
+    height: 20px;
+    width: 100%;
+
+    display: flex;
   }
 
   &__description {
+    padding: 3rem;
+    background: $color-tertiary;
+    color: $color-quaternary;
     width: 100%;
-    height: 100%;
-    background-color: blue;
+    flex: 2;
   }
 
   &__technologies {
+    padding: 3rem;
+    background: $color-quaternary;
     width: 100%;
-    height: 100%;
-    background-color: green;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__tech-list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    list-style: none;
+    font-size: 2rem;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-self: flex-start;
+
+    li {
+      background: $color-tertiary;
+      color: $color-quaternary;
+      padding: 6px 10px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+
+      &:hover {
+        background: $color-primary;
+      }
+    }
+  }
+
+  &__tech-live {
+    width: 100%;
   }
 }
