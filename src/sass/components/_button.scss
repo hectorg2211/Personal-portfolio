@@ -13,6 +13,8 @@
   align-items: center; // Helps align the before pseudo element
   text-decoration: none;
   overflow: hidden;
+  border-radius: 30px;
+  overflow: hidden;
 
   &:hover,
   &:focus {
@@ -25,7 +27,7 @@
     content: "";
     position: absolute;
     width: 4rem;
-    height: 500%;
+    height: 10000%;
     background-color: $color-primary;
     transition: 1s;
     animation: animate 2s linear infinite;
@@ -53,6 +55,8 @@
     inset: 5px;
     background: $color-tertiary;
     transition: 0.5s;
+    border-radius: 30px;
+    overflow: hidden;
   }
 
   &:hover::after {

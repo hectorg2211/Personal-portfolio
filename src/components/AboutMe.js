@@ -7,17 +7,16 @@ export default function AboutMe() {
         <div className="about__left">
           <h2 className="h3 h3--1">About me</h2>
           <p className="p about__info">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam
-            pariatur quis nulla inventore ea aliquid? Repellendus officia
-            consequuntur ullam distinctio eligendi aut libero delectus saepe vel
-            error, modi deleniti ad.
+            Hey! I'm Héctor. I enjoy designing web applications and making them
+            look amazing. I'm a very creative person who fell in love with web
+            design and programming in general a couple of years ago.
           </p>
           <p className="p about__info">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam
-            pariatur quis nulla inventore ea aliquid.
+            Since I'm a very passionate developer, I make sure that no detail is
+            lost when building the each project I participate in.
           </p>
         </div>
-        <a href="somewhere" className="button about__button">
+        <a href="#mywork" className="button about__button">
           <span>Check my work</span>
         </a>
         {/* TODO: Change the image or place something else here */}
