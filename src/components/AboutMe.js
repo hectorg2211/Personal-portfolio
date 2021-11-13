@@ -9,11 +9,11 @@ export default function AboutMe() {
           <p className="p about__info">
             Hey! I'm Héctor. I enjoy designing web applications and making them
             look amazing. I'm a very creative person who fell in love with web
-            design and programming in general a couple of years ago.
+            design and programming in general a couple oKWf years ago.
           </p>
           <p className="p about__info">
             Since I'm a very passionate developer, I make sure that no detail is
-            lost when building the each project I participate in.
+            lost when building each project I participate in.
           </p>
         </div>
         <a href="#mywork" className="button about__button">
