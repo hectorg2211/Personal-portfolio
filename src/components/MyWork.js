@@ -3,6 +3,7 @@ import Modal from "./Modal";
 
 export default function MyWork() {
   const [modalState, setModalState] = useState(false);
+  const [selectedWork, setSelectedWork] = useState("");
 
   const onWorkClickHandler = () => {
     setModalState(true);
@@ -18,41 +19,61 @@ export default function MyWork() {
           <img
             src="./images/HeyThere.jpg"
             alt="img1"
-            onClick={onWorkClickHandler}
+            onClick={() => {
+              setSelectedWork("heythere");
+              onWorkClickHandler();
+            }}
             className="img"
           />
           <img
             src="./images/React-movies.jpg"
             alt="img2"
-            onClick={onWorkClickHandler}
+            onClick={() => {
+              setSelectedWork("react-movies");
+              onWorkClickHandler();
+            }}
             className="img"
           />
           <img
             src="./images/Natours.jpg"
             alt="img3"
-            onClick={onWorkClickHandler}
+            onClick={() => {
+              setSelectedWork("natours");
+              onWorkClickHandler();
+            }}
             className="img"
           />
           <img
             src="./images/Rider.jpg"
             alt="img4"
-            onClick={onWorkClickHandler}
+            onClick={() => {
+              setSelectedWork("rider");
+              onWorkClickHandler();
+            }}
             className="img"
           />
           <img
             src="./images/Travelfy.jpg"
             alt="img5"
-            onClick={onWorkClickHandler}
+            onClick={() => {
+              setSelectedWork("travelfy");
+              onWorkClickHandler();
+            }}
             className="img"
           />
           <img
             src="./images/Nexter.jpg"
             alt="img6"
-            onClick={onWorkClickHandler}
+            onClick={() => {
+              setSelectedWork("nexter");
+              onWorkClickHandler();
+            }}
             className="img"
           />
         </div>
-        {modalState && <Modal setModalState={setModalState} />}
+        {modalState && (
+          <Modal setModalState={setModalState} showcase={selectedWork} />
+        )}
       </div>
     </section>
   );
