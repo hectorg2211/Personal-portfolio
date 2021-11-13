@@ -1,6 +1,9 @@
 .about {
   background-color: $color-tertiary;
   padding: 9rem;
+  @media only screen and (max-width: $bp-medium) {
+    padding: 5rem;
+  }
 
   &__button {
     grid-column-start: 1;
@@ -15,6 +18,18 @@
     row-gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
+
+    border-radius: 30px;
+    overflow: hidden;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 4rem 5rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, min-content);
+    }
   }
 
   h2 {
@@ -27,10 +42,17 @@
 
   &__dummy {
     width: 100%;
-    height: 100%;
+    height: 100px;
     background-color: $color-primary;
     grid-column-start: 2;
     grid-row-start: 1;
     grid-row-end: 3;
+
+    @media only screen and (max-width: $bp-smallest) {
+      grid-column-start: 1;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      row-gap: 5rem;
+    }
   }
 }

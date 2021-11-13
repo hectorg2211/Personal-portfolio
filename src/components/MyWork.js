@@ -2,7 +2,7 @@ import React from "react";
 
 export default function MyWork() {
   return (
-    <section className="my-work">
+    <section className="my-work" id="mywork">
       <div className="top-half"></div>
       <div className="bottom-half"></div>
       <div className="work-information">

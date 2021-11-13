@@ -31,7 +31,7 @@ export default function Header() {
             onInit={(typewriter) => {
               setTimeout(() => {
                 typewriter
-                  .typeString("Front - End Developer & Web Designer")
+                  .typeString("Full - Stack web developer")
                   .pauseFor(1000)
                   .callFunction(removeTypeCursor)
                   .start();
