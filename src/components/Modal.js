@@ -1,7 +1,15 @@
 import React from "react";
 
 export default function Modal({ setModalState, showcase }) {
-  let [imageUrl, description, technologies, liveSite] = ["", "", [], ""];
+  let [imageUrl, description, technologies, liveSite, repo] = [
+    "",
+    "",
+    [],
+    "",
+    "",
+  ];
+
+  const renderTech = () => technologies.map((tech) => <li>{tech}</li>);
 
   if (showcase === "heythere") {
     imageUrl = "./images/HeyThere.jpg";
@@ -17,8 +25,23 @@ export default function Modal({ setModalState, showcase }) {
         ducimus dignissimos aliquam assumenda.
       </p>
     );
-    technologies = [];
+    technologies = [
+      "React",
+      "React router",
+      "Pusher",
+      "SASS",
+      "Material UI",
+      "Material UI Icons",
+      "Axios",
+      "Firebase",
+      "Moment",
+      "Node",
+      "MongoDB",
+      "Mongoose",
+      "Express",
+    ];
     liveSite = "https://heythere-messaging.netlify.app/";
+    repo = "https://github.com/hectorg2211/Heythere-messaging-app";
   } else if (showcase === "react-movies") {
     imageUrl = "./images/React-movies.jpg";
     description = (
@@ -35,6 +58,7 @@ export default function Modal({ setModalState, showcase }) {
     );
     technologies = [];
     liveSite = "https://reactmovieexplorer.netlify.app/";
+    repo = "https://github.com/hectorg2211/React-movies";
   } else if (showcase === "natours") {
     imageUrl = "./images/Natours.jpg";
     description = (
@@ -51,6 +75,7 @@ export default function Modal({ setModalState, showcase }) {
     );
     technologies = [];
     liveSite = "https://natours-hector-app.netlify.app/";
+    repo = "https://github.com/hectorg2211/Natours";
   } else if (showcase === "rider") {
     imageUrl = "./images/Rider.jpg";
     description = (
@@ -67,6 +92,7 @@ export default function Modal({ setModalState, showcase }) {
     );
     technologies = [];
     liveSite = "https://rider-app.netlify.app/";
+    repo = "https://github.com/hectorg2211/Rider-app";
   } else if (showcase === "travelfy") {
     imageUrl = "./images/Travelfy.jpg";
     description = (
@@ -83,6 +109,7 @@ export default function Modal({ setModalState, showcase }) {
     );
     technologies = [];
     liveSite = "https://travelfy-hector.netlify.app/";
+    repo = "https://github.com/hectorg2211/Travelfy";
   } else if (showcase === "nexter") {
     imageUrl = "./images/Nexter.jpg";
     description = (
@@ -99,6 +126,7 @@ export default function Modal({ setModalState, showcase }) {
     );
     technologies = [];
     liveSite = "https://nexter-hector-app.netlify.app/";
+    repo = "https://github.com/hectorg2211/Nexter";
   }
 
   const closeModal = (e) => {
@@ -124,13 +152,7 @@ export default function Modal({ setModalState, showcase }) {
           <div className="modal__description">{description}</div>
           <div className="modal__technologies">
             <div className="modal__tech-title p">Used technology</div>
-            <ul className="modal__tech-list">
-              <li>SASS</li>
-              <li>HTML</li>
-              <li>7 - 1 Architecture</li>
-              <li>Advanced animations</li>
-              <li>Parcel</li>
-            </ul>
+            <ul className="modal__tech-list">{renderTech()}</ul>
             <div className="modal__tech-live">
               <a
                 href={liveSite}
@@ -139,6 +161,14 @@ export default function Modal({ setModalState, showcase }) {
                 rel="noreferrer"
               >
                 <span>Live site</span>
+              </a>
+              <a
+                href={repo}
+                className="button"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>Repo</span>
               </a>
             </div>
           </div>

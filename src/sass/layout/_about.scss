@@ -19,11 +19,12 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
 
-    border-radius: 30px;
+    border-radius: $border-radius;
     overflow: hidden;
 
     @media only screen and (max-width: $bp-medium) {
       padding: 4rem 5rem;
+      border-radius: $border-radius-small;
     }
 
     @media only screen and (max-width: $bp-smallest) {
@@ -47,6 +48,11 @@
     grid-column-start: 2;
     grid-row-start: 1;
     grid-row-end: 3;
+    border-radius: $border-radius;
+
+    @media only screen and (max-width: $bp-medium) {
+      border-radius: $border-radius-small;
+    }
 
     @media only screen and (max-width: $bp-smallest) {
       grid-column-start: 1;

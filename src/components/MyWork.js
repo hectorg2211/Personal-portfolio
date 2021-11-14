@@ -16,60 +16,75 @@ export default function MyWork() {
       <div className="work-information">
         <h2 className="h2 h2--2">Some of my work</h2>
         <div className="work-information__gallery">
-          <img
-            src="./images/HeyThere.jpg"
-            alt="img1"
+          <div
+            className="work-information__image-container"
             onClick={() => {
               setSelectedWork("heythere");
               onWorkClickHandler();
             }}
-            className="img"
-          />
-          <img
-            src="./images/React-movies.jpg"
-            alt="img2"
+          >
+            <img src="./images/HeyThere.jpg" alt="img1" className="img" />
+            <img src="./images/Heythere.png" alt="" className="image-logo" />
+          </div>
+
+          <div
+            className="work-information__image-container"
             onClick={() => {
               setSelectedWork("react-movies");
               onWorkClickHandler();
             }}
-            className="img"
-          />
-          <img
-            src="./images/Natours.jpg"
-            alt="img3"
+          >
+            <img src="./images/React-movies.jpg" alt="img1" className="img" />
+            <img
+              src="./images/react-movies.png"
+              alt=""
+              className="image-logo"
+            />
+          </div>
+
+          <div
+            className="work-information__image-container"
             onClick={() => {
               setSelectedWork("natours");
               onWorkClickHandler();
             }}
-            className="img"
-          />
-          <img
-            src="./images/Rider.jpg"
-            alt="img4"
+          >
+            <img src="./images/Natours.jpg" alt="img1" className="img" />
+            <img src="./images/natours.png" alt="" className="image-logo" />
+          </div>
+
+          <div
+            className="work-information__image-container"
             onClick={() => {
               setSelectedWork("rider");
               onWorkClickHandler();
             }}
-            className="img"
-          />
-          <img
-            src="./images/Travelfy.jpg"
-            alt="img5"
+          >
+            <img src="./images/Rider.jpg" alt="img1" className="img" />
+            <img src="./images/Rider.png" alt="" className="image-logo" />
+          </div>
+
+          <div
+            className="work-information__image-container"
             onClick={() => {
               setSelectedWork("travelfy");
               onWorkClickHandler();
             }}
-            className="img"
-          />
-          <img
-            src="./images/Nexter.jpg"
-            alt="img6"
+          >
+            <img src="./images/Travelfy.jpg" alt="img1" className="img" />
+            <img src="./images/Travelfy.png" alt="" className="image-logo" />
+          </div>
+
+          <div
+            className="work-information__image-container"
             onClick={() => {
               setSelectedWork("nexter");
               onWorkClickHandler();
             }}
-            className="img"
-          />
+          >
+            <img src="./images/Nexter.jpg" alt="img1" className="img" />
+            <img src="./images/Nexter.png" alt="" className="image-logo" />
+          </div>
         </div>
         {modalState && (
           <Modal setModalState={setModalState} showcase={selectedWork} />

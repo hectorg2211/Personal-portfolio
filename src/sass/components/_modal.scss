@@ -16,10 +16,16 @@
   width: 80vw;
   height: 85vh;
   background-color: $color-quaternary;
-  border-radius: 30px;
+  border-radius: $border-radius;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+
+  @media only screen and (max-width: $bp-medium) {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0px;
+  }
 
   &__close-btn {
     backdrop-filter: blur(2px);
@@ -62,7 +68,7 @@
   }
 
   &__description {
-    padding: 3rem;
+    padding: 2.5rem;
     background: $color-tertiary;
     color: $color-quaternary;
     width: 100%;
@@ -70,15 +76,15 @@
   }
 
   &__technologies {
-    padding: 3rem;
+    padding: 2.5rem;
     background: $color-quaternary;
     width: 100%;
-    flex: 1;
+    flex: 1.5;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 10px;
   }
 
   &__tech-list {
@@ -108,5 +114,10 @@
 
   &__tech-live {
     width: 100%;
+    display: flex;
+    gap: 10px;
+    a {
+      flex: 1;
+    }
   }
 }
