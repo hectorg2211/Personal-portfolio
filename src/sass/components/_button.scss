@@ -16,8 +16,11 @@
   border-radius: 30px;
   overflow: hidden;
 
-  &:hover,
-  &:focus {
+  &--1 {
+    background: $color-quaternary;
+  }
+
+  &:hover {
     background-color: $color-primary;
     box-shadow: 0 0 10px $color-primary, 0 0 30px $color-primary,
       0 0 60px $color-primary, 0 0 100px $color-primary;
@@ -33,6 +36,10 @@
     animation: animate 2s linear infinite;
     @media only screen and (max-width: $bp-medium) {
       height: 1300%;
+    }
+
+    &--1 {
+      background: $color-quaternary;
     }
   }
 

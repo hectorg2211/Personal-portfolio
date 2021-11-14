@@ -21,7 +21,29 @@ export default function AboutMe() {
         </a>
         {/* TODO: Change the image or place something else here */}
         {/* <img src="" alt="Something" className="about__img" /> */}
-        <div className="about__dummy"></div>
+        <div className="about__right">
+          <div className="top">
+            <h3 className="h3 h3--1">See my Github page</h3>
+            <a
+              href="https://github.com/hectorg2211"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src="./images/Github.svg"
+                alt="Github logo"
+                className="github-logo"
+              />
+            </a>
+          </div>
+
+          <div className="bottom">
+            <h3 className="h3 h3--1">Or Contact me </h3>
+            <a href="#contact" className="button about__button">
+              <span>Contact</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
