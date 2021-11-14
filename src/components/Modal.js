@@ -9,20 +9,28 @@ export default function Modal({ setModalState, showcase }) {
     "",
   ];
 
-  const renderTech = () => technologies.map((tech) => <li>{tech}</li>);
+  const renderTech = () =>
+    technologies.map((tech, i) => <li key={i}>{tech}</li>);
 
   if (showcase === "heythere") {
     imageUrl = "./images/HeyThere.jpg";
     description = (
-      <p className="p">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam odit
-        officiis saepe id similique at aliquid delectus quo repudiandae
-        blanditiis! Voluptatum iusto magnam maiores earum nemo. Atque asperiores
-        vel ipsum? Lorem, ipsum dolor sit amet consectetur adipisicing elit.{" "}
+      <p className="p-1">
+        Fully functional messaging app with real-time functionality and google
+        authentication. The app allows the user to sign in using their google
+        account, this lets their messages display their name and their own image
+        inside the application, also rooms can be accessed to chat with other
+        users. Pusher was used for real-time message updates, this allowed
+        messages to show on screen each time a new message was added. The axios
+        library was implemented to make requests to the REST API that was built
+        with express and mongoose, this allowed the creation of new messages as
+        well as access to the room information.
         <br />
         <br />
-        Sequi porro mollitia qui inventore suscipit corrupti perspiciatis
-        ducimus dignissimos aliquam assumenda.
+        Material UI Icons where used to display aesthetic icons and the moment
+        library allowed the application to display how long ago a message was
+        sent or received. The API for this app was deployed in heroku and the
+        app itself in netlify.
       </p>
     );
     technologies = [
@@ -45,86 +53,99 @@ export default function Modal({ setModalState, showcase }) {
   } else if (showcase === "react-movies") {
     imageUrl = "./images/React-movies.jpg";
     description = (
-      <p className="p">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam odit
-        officiis saepe id similique at aliquid delectus quo repudiandae
-        blanditiis! Voluptatum iusto magnam maiores earum nemo. Atque asperiores
-        vel ipsum? Lorem, ipsum dolor sit amet consectetur adipisicing elit.{" "}
+      <p className="p-1">
+        Fully responsive movie information page built with the use of The Movie
+        Database API, by using this API movie images, actors, budget, duration
+        and other information was fetched corresponding to each movie. The app
+        also comes with a search feature allowing you to look for any movie with
+        real-time updates.
         <br />
-        <br />
-        Sequi porro mollitia qui inventore suscipit corrupti perspiciatis
-        ducimus dignissimos aliquam assumenda.
+        <br />A glass look was given to each individual movie information screen
+        for a modern visualization. On specific movie pages all actors, budget,
+        duration and other information corresponding to the specific movie is
+        displayed. Other animations we're also added for a more fluid look.
       </p>
     );
-    technologies = [];
+    technologies = ["React", "React-router", "TMDB", "Styled components"];
     liveSite = "https://reactmovieexplorer.netlify.app/";
     repo = "https://github.com/hectorg2211/React-movies";
   } else if (showcase === "natours") {
     imageUrl = "./images/Natours.jpg";
     description = (
-      <p className="p">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam odit
-        officiis saepe id similique at aliquid delectus quo repudiandae
-        blanditiis! Voluptatum iusto magnam maiores earum nemo. Atque asperiores
-        vel ipsum? Lorem, ipsum dolor sit amet consectetur adipisicing elit.{" "}
-        <br />
-        <br />
-        Sequi porro mollitia qui inventore suscipit corrupti perspiciatis
-        ducimus dignissimos aliquam assumenda.
+      <p className="p-1">
+        Completely responsive fictional tours app with modern animations. The
+        app shows fully animated components as well as card flips which give the
+        website an amazing look, these elements are showed stacked when used on
+        a smaller screen which avoids the flipping animation to cause
+        accessibility issues on smaller devices. A modern form is also displayed
+        at the bottom section which has a personalized look.
       </p>
     );
-    technologies = [];
+    technologies = [
+      "SASS",
+      "Parcel",
+      "HTML",
+      "7 - 1 Structure",
+      "Advanced animations",
+    ];
     liveSite = "https://natours-hector-app.netlify.app/";
     repo = "https://github.com/hectorg2211/Natours";
   } else if (showcase === "rider") {
     imageUrl = "./images/Rider.jpg";
     description = (
-      <p className="p">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam odit
-        officiis saepe id similique at aliquid delectus quo repudiandae
-        blanditiis! Voluptatum iusto magnam maiores earum nemo. Atque asperiores
-        vel ipsum? Lorem, ipsum dolor sit amet consectetur adipisicing elit.{" "}
+      <p className="p-1">
+        Fictional transportation app with google authentication, route tracing
+        and price calculation. The authentication allows you to access the app
+        and displays your google image on the screen. To sign out just click
+        your own image.
         <br />
         <br />
-        Sequi porro mollitia qui inventore suscipit corrupti perspiciatis
-        ducimus dignissimos aliquam assumenda.
+        The Rider app allows you to sign in with google, select a pickup
+        location as well as the dropoff. Once this is done a screen with mapbox
+        shows map markers, the route it will take and the price for the rides
+        you can take. To make use of the previously mentioned functionality the
+        ride button must be selected and then the pickup and dropoff inputs will
+        be displayed.
       </p>
     );
-    technologies = [];
+    technologies = [
+      "React",
+      "Next JS",
+      "Tailwind CSS",
+      "Tailwind styled components",
+      "Mapbox API",
+      "Firebase",
+      "Authentication",
+    ];
     liveSite = "https://rider-app.netlify.app/";
     repo = "https://github.com/hectorg2211/Rider-app";
   } else if (showcase === "travelfy") {
     imageUrl = "./images/Travelfy.jpg";
     description = (
-      <p className="p">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam odit
-        officiis saepe id similique at aliquid delectus quo repudiandae
-        blanditiis! Voluptatum iusto magnam maiores earum nemo. Atque asperiores
-        vel ipsum? Lorem, ipsum dolor sit amet consectetur adipisicing elit.{" "}
+      <p className="p-1">
+        Fully responsive fictional tours app with focus on CSS flexbox and grid.
         <br />
         <br />
-        Sequi porro mollitia qui inventore suscipit corrupti perspiciatis
-        ducimus dignissimos aliquam assumenda.
+        This app adapts to any screen size allowing the user to see every
+        component as well as all the used animations within the app.
       </p>
     );
-    technologies = [];
+    technologies = ["React", "SASS", "Parcel", "HTML", "Flexbox", "Grid"];
     liveSite = "https://travelfy-hector.netlify.app/";
     repo = "https://github.com/hectorg2211/Travelfy";
   } else if (showcase === "nexter") {
     imageUrl = "./images/Nexter.jpg";
     description = (
-      <p className="p">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam odit
-        officiis saepe id similique at aliquid delectus quo repudiandae
-        blanditiis! Voluptatum iusto magnam maiores earum nemo. Atque asperiores
-        vel ipsum? Lorem, ipsum dolor sit amet consectetur adipisicing elit.{" "}
+      <p className="p-1">
+        Fully responsive fictional Real State app with focus on CSS flexbox and
+        grid.
         <br />
         <br />
-        Sequi porro mollitia qui inventore suscipit corrupti perspiciatis
-        ducimus dignissimos aliquam assumenda.
+        This website adapts to any screen size allowing the user to see every
+        component respond and relocate according to the screen:
       </p>
     );
-    technologies = [];
+    technologies = ["SASS", "Parcel", "HTML", "Flexbox", "Grid"];
     liveSite = "https://nexter-hector-app.netlify.app/";
     repo = "https://github.com/hectorg2211/Nexter";
   }

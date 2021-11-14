@@ -13,13 +13,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80vw;
+  width: 85vw;
   height: 85vh;
   background-color: $color-quaternary;
   border-radius: $border-radius;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  font-size: 20% !important;
 
   @media only screen and (max-width: $bp-medium) {
     width: 100vw;
@@ -61,17 +62,18 @@
 
   &__information {
     flex: 2;
-    height: 20px;
     width: 100%;
-
     display: flex;
   }
 
   &__description {
-    padding: 2.5rem;
+    padding: 3rem;
     background: $color-tertiary;
     color: $color-quaternary;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex: 2;
   }
 
